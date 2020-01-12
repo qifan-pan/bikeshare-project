@@ -202,6 +202,9 @@ def main():
         df = load_data(city, month, day)
 
         time_stats(df)
+        want_more = input('\nWould you like to read more date result?\n \'no\' to exit!')
+        if want_more.lower() == 'no':
+            break
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
