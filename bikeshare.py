@@ -206,6 +206,9 @@ def main():
         if want_more.lower() == 'no':
             break
         station_stats(df)
+        want_more = input('\nWould you like to read more date result?\n')
+        if want_more.lower() == 'no':
+            break
         trip_duration_stats(df)
         user_stats(df)
 
