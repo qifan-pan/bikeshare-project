@@ -205,11 +205,17 @@ def main():
         want_more = input('\nWould you like to read more date result?\n \'no\' to exit!')
         if want_more.lower() == 'no':
             break
+
         station_stats(df)
         want_more = input('\nWould you like to read more date result?\n')
         if want_more.lower() == 'no':
             break
+
         trip_duration_stats(df)
+        want_more = input('\nWould you like to read more date result?\n')
+        if want_more.lower() == 'no':
+            break
+        
         user_stats(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
